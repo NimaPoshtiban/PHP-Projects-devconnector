@@ -22,7 +22,7 @@
     <ul>
       <li><a href="profiles.html">Developers</a></li>
       <li><a href="register.html">Register</a></li>
-      <li><a href="login.html">Login</a></li>
+      <li><a href="login.php">Login</a></li>
     </ul>
   </nav>
   <section class="landing">
@@ -35,7 +35,7 @@
         </p>
         <div class="buttons">
           <a href="register.html" class="btn btn-primary">Sign Up</a>
-          <a href="login.html" class="btn btn-light">Login</a>
+          <a href="login.php" class="btn btn-light">Login</a>
         </div>
       </div>
     </div>

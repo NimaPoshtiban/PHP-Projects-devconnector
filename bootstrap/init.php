@@ -1,5 +1,6 @@
 <?php
-
+# start using session
+session_start();
 include "constants.php";
 include BASE_PATH . "config/config.php";
 include BASE_PATH . "libs/helpers.php";
@@ -11,3 +12,5 @@ try {
 } catch (PDOException $error) {
   diePage("Failed to connect", $error->getMessage() . PHP_EOL);
 }
+
+include BASE_PATH . "libs/Login.php";
