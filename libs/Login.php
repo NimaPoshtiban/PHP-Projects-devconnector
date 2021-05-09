@@ -1,6 +1,6 @@
 <?php
 
-class Login extends Email
+class Login 
 {
     use Email {Email::get_user_by_email as protected;}
 

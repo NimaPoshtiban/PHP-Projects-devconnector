@@ -17,3 +17,15 @@ trait Email
         return $records[0] ?? null;
     }
 }
+
+function dd($var)
+{
+    echo "<pre>";
+    var_dump($var);
+    echo "</pre>";
+}
+
+function message(string $msg):void
+{
+    echo "";
+}
