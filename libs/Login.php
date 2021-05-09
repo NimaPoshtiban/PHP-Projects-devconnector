@@ -1,6 +1,6 @@
 <?php
-
-class Login 
+defined('BASE_PATH') or die("Permission Denied!");
+class Login
 {
     use Email {Email::get_user_by_email as protected;}
 
@@ -33,6 +33,11 @@ class Login
         }
         if (password_verify($password, $user->password)) {
             # login is successful
+
+            # gravatar
+            $grav_url = "https://www.gravatar.com/avatar/" . md5(strtolower(trim($user->email))) ;
+            $user->image = $grav_url;
+
             $_SESSION['login'] = $user;
             return true;
         }

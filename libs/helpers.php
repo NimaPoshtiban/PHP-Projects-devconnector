@@ -1,5 +1,5 @@
 <?php
-
+defined('BASE_PATH') or die("Permission Denied!");
 function diePage(string $msg = null):void
 {
     echo "<strong>{$msg}</strong>";
@@ -7,7 +7,7 @@ function diePage(string $msg = null):void
 }
 trait Email
 {
-    public static function get_user_by_email(string $email):string
+    public static function get_user_by_email(string $email):object
     {
         global $pdo;
         $sql = "SELECT * from devconnector.users WHERE email = ?";
@@ -18,7 +18,7 @@ trait Email
     }
 }
 
-function dd($var)
+function dd($var):void
 {
     echo "<pre>";
     var_dump($var);
@@ -27,5 +27,11 @@ function dd($var)
 
 function message(string $msg):void
 {
-    echo "";
+    echo "<div class='alert alert-danger'>         {$msg}       </div>";
+}
+
+function redirect(string $url):void
+{
+    header("Location: $url",true,303);
+    die();
 }

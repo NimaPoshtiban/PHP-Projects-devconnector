@@ -21,8 +21,14 @@
     </h1>
     <ul>
       <li><a href="profiles.html">Developers</a></li>
-      <li><a href="register.html">Register</a></li>
+    <?php if(!Login::is_user_logged_in()): ?>
       <li><a href="login.php">Login</a></li>
+      <li><a href="register.php">Register</a></li>
+      <?php else:?>
+      <li><a href="posts.php">Posts</a></li>
+      <li> | <a href="dashboard.html" title="Dashboard"><i class="fas fa-user"></i> <span class="hide-sm">Dashboard</span></a> </li>
+      <li> <a href="login.php" title="Logout"> <i class="fas fa-sign-out-alt"></i> <span class="hide-sm">Logout</span></a></li>
+      <?php endif; ?>
     </ul>
   </nav>
   <section class="landing">
@@ -34,7 +40,7 @@
           other developers
         </p>
         <div class="buttons">
-          <a href="register.html" class="btn btn-primary">Sign Up</a>
+          <a href="register.php" class="btn btn-primary">Sign Up</a>
           <a href="login.php" class="btn btn-light">Login</a>
         </div>
       </div>
