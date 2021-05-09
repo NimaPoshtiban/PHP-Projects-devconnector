@@ -4,7 +4,7 @@ class Register {
   use Email;
   public static function register($userData):bool
   {
-      $user  = static::get_user_by_email($userData['email']);
+      $user  = static::get_user_by_email($userData['email']) ?? null;
       if($user){
         echo "<div class='alert alert-danger'>         This Email is being used by another user     </div>";
         return false;

@@ -7,7 +7,7 @@ function diePage(string $msg = null):void
 }
 trait Email
 {
-    public static function get_user_by_email(string $email):object
+    public static function get_user_by_email(string $email)
     {
         global $pdo;
         $sql = "SELECT * from devconnector.users WHERE email = ?";
@@ -27,11 +27,11 @@ function dd($var):void
 
 function message(string $msg):void
 {
-    echo "<div class='alert alert-danger'>         {$msg}       </div>";
+    echo "<br><br><br><div class='alert alert-danger'>         {$msg}       </div>";
 }
 
 function redirect(string $url):void
 {
-    header("Location: $url",true,303);
+    header("Location: $url");
     die();
 }
