@@ -20,25 +20,14 @@
     </h1>
     <ul>
       <li><a href="profiles.html">Developers</a></li>
-      <?php if (!Login::is_user_logged_in()): ?>
       <li><a href="register.php">Register</a></li>
       <li><a href="login.php">Login</a></li>
-      <?php else:?>
-      <li><a href="posts.php">Posts</a></li>
-      <li> | <a href="dashboard.html" title="Dashboard"><i class="fas fa-user"></i> <span
-            class="hide-sm">Dashboard</span></a> </li>
-      <li> <a href="login.php" title="Logout"> <i class="fas fa-sign-out-alt"></i> <span
-            class="hide-sm">Logout</span></a></li>
-      <?php endif; ?>
     </ul>
   </nav>
   <section class="container">
-    <div class="alert alert-danger">
-      Invalid credentials
-    </div>
     <h1 class="large text-primary">Login</h1>
     <p class="lead"><i class="fas fa-user"></i> Sign into Your Account</p>
-    <form class="form" action="dashboard.html">
+    <form class="form" action="" method="POST">
       <div class="form-group">
         <input type="email" placeholder="Email Address" name="email" required />
       </div>

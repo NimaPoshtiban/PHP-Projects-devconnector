@@ -20,16 +20,8 @@
     </h1>
     <ul>
       <li><a href="profiles.php">Developers</a></li>
-      <?php if (!Login::is_user_logged_in()): ?>
       <li><a href="register.php">Register</a></li>
       <li><a href="login.php">Login</a></li>
-      <?php else:?>
-      <li><a href="posts.php">Posts</a></li>
-      <li> | <a href="dashboard.html" title="Dashboard"><i class="fas fa-user"></i> <span
-            class="hide-sm">Dashboard</span></a> </li>
-      <li> <a href="login.php" title="Logout"> <i class="fas fa-sign-out-alt"></i> <span
-            class="hide-sm">Logout</span></a></li>
-      <?php endif; ?>
     </ul>
   </nav>
   <section class="container">
