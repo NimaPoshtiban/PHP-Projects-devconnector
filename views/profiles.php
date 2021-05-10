@@ -47,15 +47,18 @@
             <?=$name->name?>
           </h2>
           <p>
-            <?=$name->status ?? "Unknown" ?> at <?=$name->company ?? "Unknown"?>
+            <?=$name->status ?? "Unknown" ?> at
+            <?=$name->company ?? "Unknown"?>
           </p>
-          <p><?=$name->location?></p>
-          <a href="profile.php" class="btn btn-primary">View Profile</a>
+          <p><?=$name->location?>
+          </p>
+          <a href="profile.php?id=<?=$name->id ?>"
+            class="btn btn-primary">View Profile</a>
         </div>
 
         <ul>
           <li class="text-primary">
-              <?=$name->skills ?? null?>
+            <?=$name->skills ?? null?>
           </li>
         </ul>
       </div>
