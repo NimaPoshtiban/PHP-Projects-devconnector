@@ -47,32 +47,19 @@
             <?=$name->name?>
           </h2>
           <p>
-            <?=$name->status?>
-            Microsoft
+            <?=$name->status ?? "Unknown" ?> at <?=$name->company ?? "Unknown"?>
           </p>
-          <p>Seattle, WA</p>
+          <p><?=$name->location?></p>
           <a href="profile.php" class="btn btn-primary">View Profile</a>
         </div>
 
         <ul>
           <li class="text-primary">
-            <i class="fas fa-check"></i> HTML
-          </li>
-          <li class="text-primary">
-            <i class="fas fa-check"></i> CSS
-          </li>
-          <li class="text-primary">
-            <i class="fas fa-check"></i> JavaScript
-          </li>
-          <li class="text-primary">
-            <i class="fas fa-check"></i> Python
-          </li>
-          <li class="text-primary">
-            <i class="fas fa-check"></i> C#
+              <?=$name->skills ?? null?>
           </li>
         </ul>
       </div>
-      
+
       <?php endforeach;?>
     </div>
   </section>
