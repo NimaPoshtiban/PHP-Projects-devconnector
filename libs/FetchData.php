@@ -13,25 +13,17 @@ class FetchData{
     
   }
 
-  public  static function get_name()
+  public  static function get_all_data()
   {
     global $pdo ;
-    $sql = "SELECT name FROM devconnector.users";
+    $sql = "SELECT * FROM devconnector.users";
     $statement = $pdo->prepare($sql);
     $statement->execute();
     $records = $statement->fetchAll(PDO::FETCH_OBJ);
     return $records;
   }
 
-  public static function get_status()
-  {
-    global $pdo;
-    $sql = "SELECT status FROM devconnector.users";
-    $statement = $pdo->prepare($sql);
-    $statement->execute();
-    $records = $statement->fetchAll(PDO::FETCH_OBJ);
-    return $records[0];
-  }
+  
 }
 
 

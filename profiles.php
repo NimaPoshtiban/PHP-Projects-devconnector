@@ -1,6 +1,5 @@
 <?php
 include "bootstrap/init.php";
 
-$names = FetchData::get_name();
-$statuses = FetchData::get_status();
+$data= FetchData::get_all_data();
 include "views/profiles.php";
