@@ -40,8 +40,10 @@
           other developers
         </p>
         <div class="buttons">
+          <?php if(!Login::is_user_logged_in()):?>
           <a href="register.php" class="btn btn-primary">Sign Up</a>
           <a href="login.php" class="btn btn-light">Login</a>
+          <?php endif;?>
         </div>
       </div>
     </div>
