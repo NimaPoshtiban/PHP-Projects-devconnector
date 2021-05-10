@@ -3,7 +3,7 @@ defined('BASE_PATH') or die("Permission Denied!");
 class Login
 {
     use Email {Email::get_user_by_email as protected;}
-
+    use Info;
     private $id;
 
     public function __construct()
@@ -18,11 +18,6 @@ class Login
     public static function logout():void
     {
         unset($_SESSION['login']);
-    }
-
-    public static function get_user_info()
-    {
-        return $_SESSION['login'] ?? null;
     }
 
     public static function login(string $email, string $password):bool
@@ -46,6 +41,7 @@ class Login
     
     public static function get_user_id():int
     {
-        return $this->id;
+        $id =(int)$this->id;
+        return $id;
     }
 }

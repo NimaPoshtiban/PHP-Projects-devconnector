@@ -19,7 +19,7 @@
       <a href="index.php"><i class="fas fa-code"></i> DevConnector</a>
     </h1>
     <ul>
-      <li><a href="profiles.html">Developers</a></li>
+      <li><a href="profiles.php">Developers</a></li>
       <li><a href="register.php">Register</a></li>
       <li><a href="login.php">Login</a></li>
     </ul>

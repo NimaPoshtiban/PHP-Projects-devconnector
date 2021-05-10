@@ -20,7 +20,7 @@
       <a href="index.php"><i class="fas fa-code"></i> DevConnector</a>
     </h1>
     <ul>
-      <li><a href="profiles.html">Developers</a></li>
+      <li><a href="profiles.php">Developers</a></li>
     <?php if(!Login::is_user_logged_in()): ?>
       <li><a href="login.php">Login</a></li>
       <li><a href="register.php">Register</a></li>

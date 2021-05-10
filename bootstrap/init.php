@@ -15,3 +15,4 @@ try {
 
 include BASE_PATH . "libs/Login.php";
 include BASE_PATH . "libs/Register.php";
+include BASE_PATH . "libs/FetchData.php";

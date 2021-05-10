@@ -18,6 +18,14 @@ trait Email
     }
 }
 
+trait Info
+{
+    public static function get_user_info()
+    {
+        return $_SESSION['login'] ?? null;
+    }
+}
+
 function dd($var):void
 {
     echo "<pre>";
