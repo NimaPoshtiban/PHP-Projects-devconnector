@@ -20,7 +20,7 @@ class FetchData{
     $statement = $pdo->prepare($sql);
     $statement->execute();
     $records = $statement->fetchAll(PDO::FETCH_OBJ);
-    return $records[0];
+    return $records;
   }
 
   public static function get_status()

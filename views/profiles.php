@@ -39,21 +39,20 @@
       <i class="fab fa-connectdevelop"></i> Browse and connect with developers
     </p>
     <div class="profiles">
+      <?php foreach ($names as $name):?>
       <div class="profile bg-light">
         <img class="round-img" src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200" alt="" />
         <div>
-          <?php foreach($names as $name):?>
           <h2>
-            <?=$name?>
+            <?=$name->name?>
           </h2>
-          <?php endforeach;?>
           <p>
-          <?php foreach($statuses as $status):?>  
-          <?=$status?>
-          <?php endforeach;?> 
-          at
-            
-          Microsoft</p>
+            <?php foreach ($statuses as $status):?>
+            <?=$status?>
+            at
+
+            Microsoft
+          </p>
           <p>Seattle, WA</p>
           <a href="profile.php" class="btn btn-primary">View Profile</a>
         </div>
@@ -76,6 +75,8 @@
           </li>
         </ul>
       </div>
+      <?php endforeach;?>
+      <?php endforeach;?>
     </div>
   </section>
 </body>
