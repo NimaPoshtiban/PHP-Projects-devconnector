@@ -26,7 +26,7 @@
       <li><a href="register.php">Register</a></li>
       <?php else:?>
       <li><a href="posts.php">Posts</a></li>
-      <li> | <a href="dashboard.html" title="Dashboard"><i class="fas fa-user"></i> <span class="hide-sm">Dashboard</span></a> </li>
+      <li> | <a href="dashboard.php" title="Dashboard"><i class="fas fa-user"></i> <span class="hide-sm">Dashboard</span></a> </li>
       <li> <a href="<?=BASE_URL .'?logout=true'?>" title="Logout"> <i class="fas fa-sign-out-alt"></i> <span class="hide-sm">Logout</span></a></li>
       <?php endif; ?>
     </ul>
