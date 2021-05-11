@@ -52,8 +52,8 @@
           </p>
           <p><?=$name->location?>
           </p>
-          <a href="profile.php?id=<?=$name->id ?>"
-            class="btn btn-primary">View Profile</a>
+          <!-- <a href="profile.php?id=<?=$name->id ?>" -->
+            <!-- class="btn btn-primary">View Profile</a> -->
         </div>
 
         <ul>

@@ -125,12 +125,12 @@ class FetchData
         $statement->execute([":github_username"=>"$github_username",":id"=>$this->id]);
         return $statement->rowCount() ? true : false;
     }
-/**
- * updates bio
- *
- * @param string $bio
- * @return boolean
- */
+    /**
+     * updates bio
+     *
+     * @param string $bio
+     * @return boolean
+     */
     public static function set_bio(string $bio):bool
     {
         global $pdo;
@@ -140,4 +140,3 @@ class FetchData
         return $statement->rowCount() ? true : false;
     }
 }
-

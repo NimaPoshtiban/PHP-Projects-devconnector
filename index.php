@@ -7,3 +7,4 @@ if($_GET['logout']=="true"){
   Login::logout();
   redirect(BASE_URL);
 }
+
